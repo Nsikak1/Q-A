@@ -3,10 +3,17 @@ document.querySelectorAll(".card").forEach((element) => {
 });
 
 function toggleCollapse(ev) {
-document.querySelectorAll(".card-content").forEach(e => e.style.display = "none");
-document.querySelectorAll(".fa-plus-square").forEach(e => e.style.visibility = "visible");
-document.querySelectorAll(".fa-minus-square").forEach(e => e.style.visibility = "hidden");
-
+  let self = this;
+  document.querySelectorAll(".card-content").forEach((e) => {
+       if ( self.querySelector(".card-content") === e) return;
+    e.style.display = "none";
+  });
+  document
+    .querySelectorAll(".fa-plus-square")
+    .forEach((e) => (e.style.visibility = "visible"));
+  document
+    .querySelectorAll(".fa-minus-square")
+    .forEach((e) => (e.style.visibility = "hidden"));
 
   let cardContentStyle = this.querySelector(".card-content").style;
   let squareIcon = this.querySelector(".fa-plus-square").style;
