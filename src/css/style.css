@@ -1,0 +1,11 @@
+@import url(./reset.css);
+
+:root {
+  --bg-color: #123;
+  --text-color: white;
+}
+
+body {
+  background-color: red;
+  color: var(--text-color);
+}
